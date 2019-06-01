@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+import sys, time, os
+
+from selenium import webdriver
+
+path = '/home/gnew/projects/'
+login = 'diegosarzi'
+password = 'tEste123'
+firefox = webdriver.Firefox(firefox_binary='/opt/firefox/firefox', executable_path=r'./geckodriver')
+firefox.get('https://github.com/login')
+
+def create():
+    folderName = str(sys.argv[1])
+
+    python_button = firefox.find_elements_by_xpath('//*[@id="login_field"]')[0]
+    python_button.send_keys(login)
+
+    python_button = firefox.find_elements_by_xpath('//*[@id="password"]')[0]
+    python_button.send_keys(password)
+
+    python_button = firefox.find_elements_by_xpath('//*[@id="login"]/form/div[3]/input[4]')[0]
+    python_button.click()
+
+    python_button = firefox.find_elements_by_xpath('/html/body/div[4]/div/div/div/main/div[1]/div/div/a[2]')[0]
+    python_button.click()
+    
+    python_button = firefox.find_elements_by_xpath('//*[@id="repository_name"]')[0]
+    python_button.send_keys(folderName)
+
+    time.sleep(1)
+    python_button = firefox.find_elements_by_xpath('/html/body/div[4]/main/div/form/div[3]/button')[0]
+    python_button.click()
+
+    git_remote = firefox.find_elements_by_xpath('/html/body/div[4]/div/main/div[2]/div[1]/div[1]/div[2]/div[2]/div/pre/span[1]')[0].text
+
+    firefox.close()
+
+    os.system('./commands.sh ' + folderName)
+
+    print('Repo create successful!')
+
+create()
