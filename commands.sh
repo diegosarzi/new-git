@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="/home/gnew/projects/"
+path="/home/$USER/projects/"
 folderName="$1"
 
 ## create path
