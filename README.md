@@ -1,10 +1,14 @@
-#########################################
+# NEW-GIT
+
 CREATE NEW REPOSITORY IN GITHUB
-Deps: python3 + selenium
 
-Who to install:
-# pip3 install selenium
+## Installation
 
-Use:
+pip3 install selenium
+
+## Use
+'''shellscript
 ./new-git <nameReposity>
-#########################################
+'''
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
