@@ -1,14 +1,15 @@
 # NEW-GIT
 
-CREATE NEW REPOSITORY IN GITHUB
+Create new reposity in github using python3.
 
 ## Installation
 
 pip3 install selenium
 
 ## Use
-'''shell
+
 ./new-git <nameReposity>
-'''
+
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
