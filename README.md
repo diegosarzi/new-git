@@ -7,7 +7,7 @@ CREATE NEW REPOSITORY IN GITHUB
 pip3 install selenium
 
 ## Use
-'''shellscript
+'''shell
 ./new-git <nameReposity>
 '''
 ## License
