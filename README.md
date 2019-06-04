@@ -8,7 +8,7 @@ pip3 install selenium
 
 ## Use
 
-./new-git <nameReposity>
+./new-git nameReposity
 
 ## License
 
